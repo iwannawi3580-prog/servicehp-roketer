@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixPro - Service HP iPhone & Android Cepat Bergaransi</title>
+    <meta name="description" content="Service HP profesional untuk iPhone & Android. Ganti LCD, baterai, kamera, perbaikan IC, water damage. Cepat 30 menit, garansi 30-90 hari.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: { 500: '#2563eb', 600: '#1d4ed8' },
+                        dark: { 950: '#0A0F1E', 900: '#111827' }
+                    },
+                    animation: {
+                        'slide-down': 'slideDown 0.3s ease-out forwards',
+                        'slide-up': 'slideUp 0.3s ease-in forwards'
+                    },
+                    keyframes: {
+                        slideDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '1', transform: 'translateY(0)' },
+                            '100%': { opacity: '0', transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <!-- NAVBAR -->
+    <header class="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl h-20 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-mobile-screen-button text-white text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-white">FixPro</h1>
+                    <p class="text-xs text-slate-400 tracking-widest">SERVICE HP</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#" class="text-blue-400 font-bold border-b-2 border-blue-400 pb-1">Beranda</a>
+                <a href="#layanan" class="hover:text-white transition">Layanan</a>
+                <a href="#harga" class="hover:text-white transition">Harga</a>
+                <a href="#tentang" class="hover:text-white transition">Tentang Kami</a>
+                <a href="#garansi" class="hover:text-white transition">Garansi</a>
+                <a href="#testimoni" class="hover:text-white transition">Testimoni</a>
+                <a href="#kontak" class="hover:text-white transition">Kontak</a>
+            </nav>
+
+            <!-- Actions + Hamburger -->
+            <div class="flex items-center gap-3">
+                <a href="tel:082231444865" class="hidden md:flex items-center gap-2 text-white border-white/20 rounded-xl px-4 py-2 hover:bg-white/10">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span class="text-sm font-semibold">0822-3144-4865</span>
+                </a>
+                <a href="https://wa.me/6282231444865" class="hidden sm:flex bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl font-bold text-sm items-center gap-2 transition">
+                    Konsultasi Gratis <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <!-- Hamburger Button -->
+                <button id="menu-btn" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition">
+                    <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#0A0F1E] border-t border-white/5 overflow-hidden">
+            <nav class="flex flex-col px-6 py-4 space-y-4 text-slate-300">
+                <a href="#" class="text-blue-400 font-bold">Beranda</a>
+                <a href="#layanan" class="hover:text-white transition">Layanan</a>
+                <a href="#harga" class="hover:text-white transition">Harga</a>
+                <a href="#tentang" class="hover:text-white transition">Tentang Kami</a>
+                <a href="#garansi" class="hover:text-white transition">Garansi</a>
+                <a href="#testimoni" class="hover:text-white transition">Testimoni</a>
+                <a href="#kontak" class="hover:text-white transition">Kontak</a>
+                <a href="https://wa.me/6282231444865" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-bold text-center mt-2">
+                    Konsultasi Gratis
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center bg-[#0A0F1E] overflow-hidden pt-20">
+        <div class="absolute inset-0">
+            <img src="img/service-hp-bg.webp" alt="Service HP" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0A0F1E] via-[#0A0F1E]/95 to-transparent"></div>
+            <div class="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-blue-600/20 blur-[120px] rounded-full"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6 py-20 lg:py-0">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold leading-tight mb-4">
+                        SERVICE HP<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">IPHONE & ANDROID</span><br>
+                        CEPAT, AMAN & BERGARANSI
+                    </h1>
+                    <p class="text-lg text-slate-300 mb-8 max-w-xl">
+                        Perbaikan profesional untuk semua masalah HP Anda.
+                        Teknisi berpengalaman, sparepart berkualitas, hasil memuaskan.
+                    </p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+                        <div class="flex items-center gap-2 bg-white/5 backdrop-blur-sm border-white/10 rounded-xl px-3 py-3">
+                            <i class="fa-solid fa-shield-halved text-blue-400"></i>
+                            <div><p class="font-bold text-sm">Bergaransi</p><p class="text-xs text-slate-400">30-90 Hari</p></div>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 backdrop-blur-sm border-white/10 rounded-xl px-3 py-3">
+                            <i class="fa-solid fa-bolt text-blue-400"></i>
+                            <div><p class="font-bold text-sm">Cepat</p><p class="text-xs text-slate-400">30 Menit</p></div>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 backdrop-blur-sm border-white/10 rounded-xl px-3 py-3">
+                            <i class="fa-solid fa-microchip text-blue-400"></i>
+                            <div><p class="font-bold text-sm">Sparepart</p><p class="text-xs text-slate-400">Original</p></div>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 backdrop-blur-sm border-white/10 rounded-xl px-3 py-3">
+                            <i class="fa-solid fa-headset text-blue-400"></i>
+                            <div><p class="font-bold text-sm">Konsultasi</p><p class="text-xs text-slate-400">Gratis</p></div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/6282231444865" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp"></i> Konsultasi via WhatsApp
+                        </a>
+                        <a href="#layanan" class="border border-white/20 hover:bg-white/10 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition">
+                            Lihat Layanan <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hidden lg:block">
+                    <div class="bg-white/5 backdrop-blur-xl border-white/10 rounded-2xl p-6">
+                        <h3 class="text-white font-bold text-xl mb-2">Cek Kerusakan Gratis</h3>
+                        <p class="text-slate-400 text-sm mb-4">Konsultasikan masalah HP Anda sekarang juga!</p>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400"></i> Gratis Biaya Pengecekan</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400"></i> Diagnosa Akurat</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400"></i> Solusi & Estimasi Biaya</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400"></i> Tanpa Biaya Tersembunyi</li>
+                        </ul>
+                        <a href="https://wa.me/6282231444865" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp"></i> Cek Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYAN KAMI -->
+    <section id="layanan" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <p class="text-blue-600 font-bold text-sm tracking-widest mb-2">LAYAN KAMI</p>
+                <h2 class="text-3xl lg:text-4xl font-display font-extrabold text-slate-900 mb-3">
+                    Solusi Lengkap Untuk Semua Masalah HP Anda
+                </h2>
+                <p class="text-slate-600">Kami menangani berbagai kerusakan dengan profesional dan bergaransi</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all">
+                    <img src="img/ganti-lcd.webp" alt="Ganti LCD" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-lg mb-2">Ganti LCD / Touchscreen</h3>
+                    <p class="text-sm text-slate-600 mb-3">Layar pecah, bergaris, blank, atau tidak responsif.</p>
+                    <p class="text-blue-600 font-bold text-xl mb-4">Mulai dari Rp150.000</p>
+                    <a href="https://wa.me/6282231444865" class="w-full block text-center border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-2.5 rounded-xl font-semibold transition">Lihat Detail</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all">
+                    <img src="img/ganti-baterai.webp" alt="Ganti Baterai" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-lg mb-2">Ganti Baterai</h3>
+                    <p class="text-sm text-slate-600 mb-3">Baterai cepat habis, drop, atau tidak bisa dicas.</p>
+                    <p class="text-blue-600 font-bold text-xl mb-4">Mulai dari Rp100.000</p>
+                    <a href="https://wa.me/6282231444865" class="w-full block text-center border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-2.5 rounded-xl font-semibold transition">Lihat Detail</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all">
+                    <img src="img/perbaikan-camera.webp" alt="Perbaikan Kamera" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-lg mb-2">Perbaikan Kamera</h3>
+                    <p class="text-sm text-slate-600 mb-3">Kamera buram, tidak fokus, atau tidak bisa dibuka.</p>
+                    <p class="text-blue-600 font-bold text-xl mb-4">Mulai dari Rp120.000</p>
+                    <a href="https://wa.me/6282231444865" class="w-full block text-center border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-2.5 rounded-xl font-semibold transition">Lihat Detail</a>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all">
+                    <img src="img/hp-kemasukan-air.webp" alt="HP Kemasukan Air" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-lg mb-2">HP Kemasukan Air</h3>
+                    <p class="text-sm text-slate-600 mb-3">Penanganan cepat untuk mencegah kerusakan parah.</p>
+                    <p class="text-blue-600 font-bold text-xl mb-4">Mulai dari Rp120.000</p>
+                    <a href="https://wa.me/6282231444865" class="w-full block text-center border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-2.5 rounded-xl font-semibold transition">Lihat Detail</a>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all">
+                    <img src="img/perbaikan-ic-software.webp" alt="Perbaikan IC Software" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-lg mb-2">Perbaikan IC / Software</h3>
+                    <p class="text-sm text-slate-600 mb-3">Masalah bootloop, mati total, sinyal, atau software.</p>
+                    <p class="text-blue-600 font-bold text-xl mb-4">Mulai dari Rp150.000</p>
+                    <a href="https://wa.me/6282231444865" class="w-full block text-center border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-2.5 rounded-xl font-semibold transition">Lihat Detail</a>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all">
+                    <img src="img/cuci-hp.webp" alt="Cuci HP" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-lg mb-2">Cuci HP / Cleaning</h3>
+                    <p class="text-sm text-slate-600 mb-3">HP panas, lemot, atau banyak debu.</p>
+                    <p class="text-blue-600 font-bold text-xl mb-4">Mulai dari Rp80.000</p>
+                    <a href="https://wa.me/6282231444865" class="w-full block text-center border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-2.5 rounded-xl font-semibold transition">Lihat Detail</a>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <i class="fa-solid fa-users text-3xl text-blue-600 mb-3"></i>
+                    <h4 class="text-3xl font-extrabold text-slate-900">10.000+</h4>
+                    <p class="text-slate-600 text-sm">Pelanggan Puas</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <i class="fa-solid fa-wrench text-3xl text-blue-600 mb-3"></i>
+                    <h4 class="text-3xl font-extrabold text-slate-900">15.000+</h4>
+                    <p class="text-slate-600 text-sm">Perbaikan Selesai</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <i class="fa-solid fa-medal text-3xl text-blue-600 mb-3"></i>
+                    <h4 class="text-3xl font-extrabold text-slate-900">5+ Tahun</h4>
+                    <p class="text-slate-600 text-sm">Pengalaman</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+                    <i class="fa-solid fa-shield-check text-3xl text-blue-600 mb-3"></i>
+                    <h4 class="text-3xl font-extrabold text-slate-900">99%</h4>
+                    <p class="text-slate-600 text-sm">Tingkat Keberhasilan</p>
+                </div>
+            </div>
+
+            <!-- Keunggulan -->
+            <div class="bg-[#0A0F1E] rounded-3xl p-8 lg:p-12">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
+                    <div class="flex items-center gap-4"><i class="fa-solid fa-clock text-2xl text-blue-400"></i><div><h5 class="font-bold">Cepat & Tepat</h5><p class="text-sm text-slate-400">Pengerjaan cepat sesuai janji</p></div></div>
+                    <div class="flex items-center gap-4"><i class="fa-solid fa-lock text-2xl text-blue-400"></i><div><h5 class="font-bold">Aman & Terpercaya</h5><p class="text-sm text-slate-400">Data aman, privacy terjaga</p></div></div>
+                    <div class="flex items-center gap-4"><i class="fa-solid fa-microchip text-2xl text-blue-400"></i><div><h5 class="font-bold">Sparepart Berkualitas</h5><p class="text-sm text-slate-400">Original & berkualitas tinggi</p></div></div>
+                    <div class="flex items-center gap-4"><i class="fa-solid fa-shield-halved text-2xl text-blue-400"></i><div><h5 class="font-bold">Garansi Hingga 90 Hari</h5><p class="text-sm text-slate-400">Garansi resmi setiap perbaikan</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0A0F1E] text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-sm">© 2026 FixPro Service HP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING WA -->
+    <a href="https://wa.me/6282231444865" class="fixed bottom-8 right-8 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-all">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Hamburger Toggle with Animation
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        let isOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isOpen =!isOpen;
+            if (isOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('animate-slide-down');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.remove('animate-slide-down');
+                mobileMenu.classList.add('animate-slide-up');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+                setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+            }
+        });
+
+        // Close menu when link clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                isOpen = false;
+                mobileMenu.classList.remove('animate-slide-down');
+                mobileMenu.classList.add('animate-slide-up');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+                setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+            });
+        });
+    </script>
+</body>
+</html>
